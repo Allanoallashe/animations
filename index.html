@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@allasheblinks</title>
+</head>
+<body>
+  
+  <p class="blink">my paragraph is blinking</p>
+
+  <h1 class="marquee">
+  <span>Welcome to AllanoAllashe@coding forum learn how to code and improve your skills to get a job.</span>
+  </h1>
+
+  <p class="imarquee">
+    <span class="span">git config --global user.name 'Allan Lenny' &#128519; &#10004;</span>
+  </p>
+
+    <h1 class="imarquee">
+  <span>
+    <span>Open gitHub account and search for AllAN LENNY, fork codes and put into your repositories</span>
+  </span>
+</h1>
+
+
+</p>
+
+    <style>
+      .span{
+        font-size: 30px;
+      }
+      .blink {
+                  animation: blink 0.3s linear infinite;
+                  color: rgb(248, 248, 253);
+                  font-family: sans-serif;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  text-align: center;
+                  margin: 20px;
+                  font-size: 40px;
+                  text-decoration: underline;
+              }
+              @keyframes blink {
+                  0%   {color: rgb(20, 201, 20);}
+                  25%  {color: rgb(33, 33, 173);}
+                  50%  {color: rgb(255, 255, 31);}
+                  100% {color: rgb(255, 49, 49);}
+              }
+
+              .marquee {
+            position: relative;
+            overflow: hidden;
+            background: rgb(0, 0, 59);
+            color: #fff;
+            text-align: center;
+        }
+
+        .marquee span {
+          display: inline-block;
+          min-width: 100%; /* this is to prevent shorter text animate to right */
+          white-space: nowrap;
+          font-size: 2em;
+          animation: marquee 15s ease-in-out forwards;
+        }
+        h1{
+          font-size: 25px;
+        }
+
+        @keyframes marquee {
+          from {transform: translateX(0);
+            margin-left:0;}
+          to   {transform: translateX(-100%,); 
+                      margin-left:-100%; }
+        }
+        body{
+          background-image: linear-gradient(to left, rgb(66, 66, 133) 0%, rgb(15, 15, 73) 25%, rgb(93, 93, 151) 50%, rgb(36, 36, 90) 75%, rgb(23, 23, 101) 100% );
+          background-size: 150%;
+        }
+
+          .imarquee {
+      overflow: hidden;
+      background: rgb(0, 0, 59);
+      color: #fff;
+    }
+
+    .imarquee > span {
+      display:block;
+      animation: imarquee 15s ease-in-out;
+      transform: translateX(-100%);
+    }
+    .imarquee > * > span {
+      display: inline-block;
+      min-width: 100%;
+      white-space: nowrap;
+      font-size: 2.5em;
+      animation:inherit;
+      transform: translateX(-100%);
+    }
+
+    @keyframes imarquee {
+      from {
+        transform: translateX(0);
+      }
+  }
+
+    </style>
+
+
+
+<!-- 
+      <script type="text/javascript">
+
+        var div1 = document.getElementById("div1");
+var cont = document.getElementById("content");
+var inf = document.getElementById("inf");
+
+inf.innerHTML = "<p> Does the text inside h1 cut off? : " + (cont.offsetWidth < cont.scrollWidth) +
+  "<br><b>Length of text overflow</b>: " + (cont.offsetWidth - cont.scrollWidth) +
+  "<br> h1 width: " + (cont.offsetWidth) + ", h1's text length: " + (cont.scrollWidth) + "</p>";
+
+
+div1.style.backgroundColor = "#A13DAF";
+cont.style.webkitAnimationName = "moving";
+cont.style.animationName = "moving";
+
+cont.style.animationDuration = "3s";
+cont.style.webkitAnimationDuration = "3s";
+
+cont.style.animationTimingFunction = "linear";
+cont.style.webkitAnimationTimingFunction = "linear";
+
+      </script>
+ -->
+
+</body>
+</html>
