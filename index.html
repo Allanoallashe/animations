@@ -8,7 +8,7 @@
 </head>
 <body>
   
-  <p class="blink">my paragraph is blinking</p>
+  <p class="blink">create a github account and explore</p>
 
   <h1 class="marquee">
   <span>Welcome to AllanoAllashe@coding forum learn how to code and improve your skills to get a job.</span>
@@ -23,6 +23,11 @@
     <span>Open gitHub account and search for AllAN LENNY, fork codes and put into your repositories</span>
   </span>
 </h1>
+    <div class="pop-container">
+    <marquee class="pop" behavior="scroll" scrollamount="5" width="90%" direction="left" loop="10" height="100%">
+        <p>GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features.</p>
+    </marquee>
+    </div>
 
 
 </p>
@@ -32,8 +37,29 @@
         font-size: 30px;
       }
       .blink {
-                  animation: blink 0.3s linear infinite;
-                  color: rgb(248, 248, 253);
+                  animation: blink 0.4s linear infinite;
+                  color: #fff;
+                  animation-iteration-count: 118;
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  margin: 20px;
+                  font-size: 40px;
+                  text-decoration: underline;
+                  text-align: center;
+              }
+              @keyframes blink {
+                  50%  {opacity: 0;color:#fff;}
+                  
+              }
+      
+              .pop-container{
+                background-color:  rgb(0, 0, 59);
+                margin-top: 10%;
+              }
+              .pop {
+                  animation: pop 1s linear infinite;
+                  color: #ffff;
                   font-family: sans-serif;
                   font-weight: bold;
                   text-transform: uppercase;
@@ -41,12 +67,11 @@
                   margin: 20px;
                   font-size: 40px;
                   text-decoration: underline;
+                  margin-left: 50px;
               }
-              @keyframes blink {
-                  0%   {color: rgb(20, 201, 20);}
-                  25%  {color: rgb(33, 33, 173);}
-                  50%  {color: rgb(255, 255, 31);}
-                  100% {color: rgb(255, 49, 49);}
+              @keyframes pop {
+                  50%  {opacity: 0.4;}
+                  
               }
 
               .marquee {
@@ -62,7 +87,9 @@
           min-width: 100%; /* this is to prevent shorter text animate to right */
           white-space: nowrap;
           font-size: 2em;
-          animation: marquee 15s ease-in-out forwards;
+          animation: marquee 15s ease-in-out alternate-reverse;
+          animation-iteration-count: 3;
+          animation-fill-mode: both;
         }
         h1{
           font-size: 25px;
@@ -72,12 +99,13 @@
           from {transform: translateX(0);
             margin-left:0;}
           to   {transform: translateX(-100%,); 
-                      margin-left:-100%; }
+                      margin-left:-120%; }
         }
         body{
-          background-image: linear-gradient(to left, rgb(66, 66, 133) 0%, rgb(15, 15, 73) 25%, rgb(93, 93, 151) 50%, rgb(36, 36, 90) 75%, rgb(23, 23, 101) 100% );
-          background-size: 150%;
+          background-image: radial-gradient( rgb(66, 66, 133) 0%, rgb(15, 15, 73) 25%, rgb(93, 93, 151) 50%, rgb(36, 36, 90) 75%, rgb(23, 23, 101) 100% );
+          background-size: 100%;
         }
+        
 
           .imarquee {
       overflow: hidden;
@@ -87,8 +115,9 @@
 
     .imarquee > span {
       display:block;
-      animation: imarquee 15s ease-in-out;
-      transform: translateX(-100%);
+      animation: imarquee 15s ease-in-out alternate-reverse;
+      transform: translateX(0);
+      animation-fill-mode: both;
     }
     .imarquee > * > span {
       display: inline-block;
@@ -97,11 +126,15 @@
       font-size: 2.5em;
       animation:inherit;
       transform: translateX(-100%);
+      animation-iteration-count: 3;
     }
 
     @keyframes imarquee {
       from {
         transform: translateX(0);
+      }
+      to {
+        transform: translateX(-63%);
       }
   }
 
